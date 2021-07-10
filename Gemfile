@@ -9,6 +9,12 @@ gem 'devise'
 # Gem for pagination
 gem 'kaminari'
 
+# Gem for twitter bootstrap
+gem 'bootstrap', '~> 5.0.1'
+
+# JQuery for rails
+gem 'jquery-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4'
 # Use sqlite3 as the database for Active Record
