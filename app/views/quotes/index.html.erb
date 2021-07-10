@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Username</th>
       <th>Body</th>
       <th colspan="3"></th>
     </tr>
@@ -13,6 +14,7 @@
   <tbody>
     <% @quotes.each do |quote| %>
       <tr>
+        <td><%= quote.username %></td>
         <td><%= quote.body %></td>
         <td><%= link_to 'Show', quote %></td>
         <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
