@@ -4,7 +4,7 @@ class QuotesController < ApplicationController
   # GET /quotes or /quotes.json
   def index
     @quotes = Quote.all
-    @quotes = Kaminari.paginate_array(@quotes).page(params[:page]).per(1)
+    @quotes = Kaminari.paginate_array(@quotes).page(params[:page]).per(10)
   end
 
   # GET /quotes/1 or /quotes/1.json
