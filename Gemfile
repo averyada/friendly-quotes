@@ -6,6 +6,9 @@ ruby '3.0.1'
 # Gem for user account creation and login
 gem 'devise'
 
+# Gem for pagination
+gem 'kaminari'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4'
 # Use sqlite3 as the database for Active Record
