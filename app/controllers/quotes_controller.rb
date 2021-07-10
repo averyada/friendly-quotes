@@ -1,6 +1,7 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: %i[ show edit update destroy ]
   before_action :authenticate_user!
+  before_action :admin?, only: %i[ edit update destroy ]
 
   # GET /quotes or /quotes.json
   def index
@@ -62,6 +63,16 @@ class QuotesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_quote
       @quote = Quote.find(params[:id])
+    end
+
+    # Checks if the current user is admin
+    def admin?
+      unless current_user.admin
+        respond_to do |format|
+          format.html { redirect_to quotes_url, notice: "You are not an admin and cannot access that page." }
+          format.json { head :no_content }
+        end
+      end
     end
 
     # Only allow a list of trusted parameters through.
