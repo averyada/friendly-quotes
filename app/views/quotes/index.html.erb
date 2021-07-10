@@ -1,4 +1,13 @@
 <p id="notice"><%= notice %></p>
+<p id="alert"><%= alert %></p>
+
+<% if user_signed_in? %>
+  <%= link_to "Sign Out", users_sign_out_path %>
+<% else %>
+  <%= link_to "Sign In", new_user_session_path %>
+  |
+  <%= link_to "Register", new_user_registration_path %>
+<% end %>
 
 <h1>Quotes</h1>
 
