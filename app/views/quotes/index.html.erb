@@ -16,7 +16,7 @@
   <tbody>
     <% @quotes.each do |quote| %>
       <tr>
-        <td><%= quote.username %></td>
+        <td><%= quote.user.profile_name %></td>
         <td><%= quote.body %></td>
         <td><%= link_to 'Show', quote %></td>
         <% if current_user.admin? %>
